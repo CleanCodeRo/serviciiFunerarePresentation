@@ -21,7 +21,6 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import { AlertModal } from "@/components/modals/alert-modal";
-import { useOrigin } from "@/hooks/useOrigin";
 import ImageUpload from "@/components/ui/imageUpload";
 
 interface BillboardFormProps {
@@ -40,7 +39,6 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
   const [loading, setLoading] = useState(false);
   const params = useParams();
   const router = useRouter();
-  const origin = useOrigin(); // tis is used because of hydration issues
 
   const title = initialData ? "Edit Billboard" : "Create Billboard";
   const description = initialData ? "Edit a Billboard" : "Add a New Billboard";
@@ -69,7 +67,7 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
       }
 
       router.refresh();
-      router.push(`/${params.storeId}/billboards`)
+      router.push(`/${params.storeId}/billboards`);
       toast.success(toastMessage);
     } catch (error) {
       toast.error("An error occurred");
@@ -81,13 +79,17 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
-      router.refresh();
-      router.push("/");
+      await axios.delete(
+        `/api/${params.storeId}/billboards/${params.billboardId}`
+      );
+      router.push(`/${params.storeId}/billboards`);
       toast.success("Billboard deleted");
+      router.refresh();
     } catch (error) {
       // this is for safety, we don't want to delete the store if there are products or categories
-      toast.error("Make sure to delete all categories using this billboard first");
+      toast.error(
+        "Make sure to delete all categories using this billboard first"
+      );
     } finally {
       setLoading(false);
       setOpen(false);
@@ -102,7 +104,7 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
         onConfirm={onDelete}
         loading={loading}
       />
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between select-none">
         <Heading title={title} description={description} />
         {initialData && (
           <Button
@@ -163,7 +165,6 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
           </Button>
         </form>
       </Form>
-      <Separator />
     </>
   );
 };
