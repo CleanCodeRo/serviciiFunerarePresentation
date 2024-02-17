@@ -14,13 +14,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {primary: 'Ppp'},
     },
     colors: {
       verdeInchis: "#06201d",
       verde: "#314c43",
       galben: "#ddbc8f",
       gri: "#d7dbda",
-      alb: "#e9e8e4"
+      alb: "#e9e8e4",
     },
     fontSize: {
       xxs: "clamp(0.75rem, 0.5vw + 0.5rem, 0.875rem)",
