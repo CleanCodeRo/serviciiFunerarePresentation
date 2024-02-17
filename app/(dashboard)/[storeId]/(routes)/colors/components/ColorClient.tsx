@@ -4,15 +4,15 @@ import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
 import { PlusIcon } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
-import { SizeColumn, columns } from "./Columns";
+import { ColorColumn, columns } from "./Columns";
 import { DataTable } from "@/components/ui/DataTable";
 import ApiList from "@/components/ui/apiList";
 
-interface SizeClientProps {
-  data: SizeColumn[];
+interface ColorClientProps {
+  data: ColorColumn[];
 }
 
-export const SizeClient: React.FC<SizeClientProps> = ({ data }) => {
+export const ColorClient: React.FC<ColorClientProps> = ({ data }) => {
   const router = useRouter();
   const params = useParams();
 
@@ -20,23 +20,21 @@ export const SizeClient: React.FC<SizeClientProps> = ({ data }) => {
     <>
       <div className="flex items-center justify-between select-none">
         <Heading
-          title={`Sizes (${data.length})`}
-          description="Manage your sizes here."
+          title={`Colors (${data.length})`}
+          description="Manage your colors here."
         />
-        <Button
-          onClick={() => router.push(`/${params.storeId}/sizes/new`)}
-        >
+        <Button onClick={() => router.push(`/${params.storeId}/colors/new`)}>
           <PlusIcon className="mr-2 h-4 w-4" />
-          Add Size
+          Add Color
         </Button>
       </div>
       <Separator />
       <DataTable searchKey="name" columns={columns} data={data} />
-      <Heading title="Api" description="API calls for Sizes" />
+      <Heading title="Api" description="API calls for Colors" />
       <Separator />
 
       {/* The api list is for use with postman or whatever is needed for debugging routes */}
-      <ApiList entityName="sizes" entityIdName="sizeId" />
+      <ApiList entityName="colors" entityIdName="colorId" />
     </>
   );
 };
