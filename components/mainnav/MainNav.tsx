@@ -3,7 +3,9 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import { late } from "zod";
+import { useState } from "react";
+import { Button } from "../ui/button";
+import { MenuIcon } from "lucide-react";
 
 export function MainNav({
   className,
@@ -12,6 +14,7 @@ export function MainNav({
   const pathname = usePathname();
   const params = useParams();
 
+  // these are the routes that are available to the admin
   const routes = [
     {
       href: `/${params.storeId}`,
@@ -29,11 +32,22 @@ export function MainNav({
         active: pathname === `/${params.storeId}/categories`,
     },
     {
+      href: `/${params.storeId}/sizes`,
+      label: `Sizes`,
+      active: pathname === `/${params.storeId}/sizes`,
+    },
+    {
+      href: `/${params.storeId}/colors`,
+      label: `Colors`,
+      active: pathname === `/${params.storeId}/colors`,
+    },
+    {
       href: `/${params.storeId}/settings`,
       label: `Settings`,
       active: pathname === `/${params.storeId}/settings`,
     },
   ];
+
 
   return (
     <nav className={cn("flex items-center space-x-4 lg:space-x-6", className)}>
