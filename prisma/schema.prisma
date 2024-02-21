@@ -21,6 +21,7 @@ model Store {
   colors      Color[] @relation("StoreToColor")
   products    Product[] @relation("StoreToProduct")
   services    Services[] @relation("ServiceToStore")
+  orders      Order[] @relation("StoreToOrder")
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
@@ -98,6 +99,7 @@ model Product {
   colorId     String
   color       Color @relation(fields: [colorId], references: [id])
   images      Image[]
+  orderItems  OrderItem[]
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
@@ -131,10 +133,42 @@ model Services {
   description String
   price       Float
   images      Image[]
+  orderItems  OrderItem[]
   isFeatured  Boolean @default(false)
   isArchived  Boolean @default(false)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@index([storeId]) // to fix the error: "Error: Index with name: Services_storeId already exists on model: Services"
+}
+
+
+model Order {
+  id          String @id @default(cuid()) @map("_id")
+  storeId     String
+  store       Store @relation("StoreToOrder", fields: [storeId], references: [id])
+  orderItems  OrderItem[]
+  isPaid      Boolean @default(false)
+  phone       String @default("")
+  address     String @default("")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+
+  @@index([storeId]) // to fix the error: "Error: Index with name: Order_storeId already exists on model: Order"
+}
+
+model OrderItem {
+  id          String @id @default(cuid()) @map("_id")
+  orderId     String
+  order       Order @relation(fields: [orderId], references: [id])
+  productId   String
+  product     Product @relation(fields: [productId], references: [id])
+  serviceId   String
+  service     Services @relation(fields: [serviceId], references: [id])
+
+
+  @@index([orderId]) // to fix the error: "Error: Index with name: OrderItem_orderId already exists on model: OrderItem"
+  @@index([productId]) // to fix the error: "Error: Index with name: OrderItem_productId already exists on model: OrderItem"
+  @@index([serviceId]) // to fix the error: "Error: Index with name: OrderItem_serviceId already exists on model: OrderItem"
 }

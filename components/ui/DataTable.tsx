@@ -27,7 +27,7 @@ import { useState } from "react";
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
-  searchKey: string;
+  searchKey: string
 }
 
 export function DataTable<TData, TValue>({
