@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/components/ui/button/Button";
+import Button from "@/components/ui/buttonMine/Button";
 import { cn } from "@/lib/utils";
 import { Color, Size } from "@/types";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -57,8 +57,8 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
               className={cn(
                 "rounded-md text-sm text-gray-800 p-2 bg-white border border-gray-300",
                 selectedValue === filter.id && "bg-black text-white"
-                )}
-                onClick={() => onClick(filter.id)}
+              )}
+              onClick={() => onClick(filter.id)}
             >
               {filter.name}
             </Button>

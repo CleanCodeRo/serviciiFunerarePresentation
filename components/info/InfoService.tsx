@@ -1,16 +1,16 @@
 "use client";
-import { Product, Service } from "@/types";
+import { Service } from "@/types";
 import Currency from "../ui/currency/Currency";
 import Button from "../ui/buttonMine/Button";
 import { ShoppingCart } from "lucide-react";
 import useCart from "@/hooks/useCart";
 import { MouseEventHandler } from "react";
 
-interface InfoProps {
-  data: Product;
+interface InfoServiceProps {
+  data: Service;
 }
 
-const Info: React.FC<InfoProps> = ({ data }) => {
+const InfoService: React.FC<InfoServiceProps> = ({ data }) => {
   const cart = useCart();
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -30,15 +30,8 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       <hr className="my-4" />
       <div className="flex flex-col gap-y-6">
         <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Size:</h3>
-          <div>{data?.size?.name}</div>
-        </div>
-        <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Color:</h3>
-          <div
-            className="h-6 w-6 rounded-full border border-gray-600"
-            style={{ backgroundColor: data?.color?.value }}
-          />
+          <h3 className="font-semibold text-black">Included Services: </h3>
+          <div>{data?.description}</div>
         </div>
       </div>
       <div className="mt-10 flex items-center gap-x-3">
@@ -51,4 +44,4 @@ const Info: React.FC<InfoProps> = ({ data }) => {
   );
 };
 
-export default Info;
+export default InfoService;

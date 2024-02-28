@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer/Footer";
-import NavBar from "@/components/navbar/NavBar";
+import Navigation from "@/app/themes/theme1/components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Servicii Funerare",
-  description: "Servicii funerare complete la cele mai bune preturi. Suna acum!",
+  description:
+    "Servicii funerare complete la cele mai bune preturi. Suna acum!",
 };
 
 export default function RootLayout({
@@ -18,9 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

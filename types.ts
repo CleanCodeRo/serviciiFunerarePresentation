@@ -37,3 +37,12 @@ export interface Color {
   name: string;
   value: string;
 }
+
+export interface Service {
+  id: string;
+  name: string;
+  price: string;
+  description: string;
+  isFeatured: boolean;
+  images: Image[];
+}

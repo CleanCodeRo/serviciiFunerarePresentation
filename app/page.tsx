@@ -1,19 +1,13 @@
-import Button from "@/components/ui/button/Button";
-import Link from "next/link";
-
+import Hero from "@/components/presentationOnly/hero/Hero";
+import Navigation from "@/app/themes/theme1/components/Navigation";
 
 export const revalidate = 0;
 
 const HomePage = () => {
-
-
   return (
-   <main className="text-center my-10">
-    <h1 className="text-6xl my-5">Hero Pages Simple</h1>
-    <Link href="/shop">
-        <Button>Shop</Button>
-    </Link>
-   </main>
+    <main className="text-center my-10">
+      <Hero />
+    </main>
   );
 };
 
