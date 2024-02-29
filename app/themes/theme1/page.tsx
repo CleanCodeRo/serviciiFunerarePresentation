@@ -1,11 +1,12 @@
-import React from 'react'
+
 import Hero from './components/Hero'
+import Contact from './components/Contact'
 
 const Theme1 = () => {
   return (
-    <div>
-        <h1>Theme 1</h1>
+    <div className=''>
         <Hero />
+        <Contact />
     </div>
   )
 }

@@ -12,7 +12,8 @@ const Navigation = () => {
                     <p>Name</p>
                 </Link>
             </div>
-            <div>
+            <div className="flex flex-row gap-5">
+                <Link href="#about" className="flex gap-2">About</Link>
                 <Link href="/themes" className="flex gap-2">Themes</Link>
             </div>
             <div className="ml-auto gap-10 flex mr-20">

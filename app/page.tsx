@@ -1,11 +1,10 @@
 import Hero from "@/components/presentationOnly/hero/Hero";
-import Navigation from "@/app/themes/theme1/components/Navigation";
 
 export const revalidate = 0;
 
 const HomePage = () => {
   return (
-    <main className="text-center my-10">
+    <main className="flex items-center justify-center">
       <Hero />
     </main>
   );

@@ -1,8 +1,13 @@
-import React from 'react'
+
+import Acasa from './components/Acasa'
+import Pachete from './components/Pachete'
 
 const Theme2 = () => {
   return (
-    <div>Theme2</div>
+    <main className='bg-slate-900'>
+      <Acasa />
+      <Pachete /> 
+    </main>
   )
 }
 
