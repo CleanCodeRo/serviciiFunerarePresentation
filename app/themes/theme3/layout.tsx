@@ -4,8 +4,13 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "Servicii Funerare",
+  description:
+    "Servicii funerare complete la cele mai bune preturi. Suna acum!",
+};
 
-export default function ThemeLayout({
+export default function Theme3Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;

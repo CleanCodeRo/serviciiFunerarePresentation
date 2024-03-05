@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Servicii funerare complete la cele mai bune preturi. Suna acum!",
 };
 
-export default function RootLayout({
+export default function ShopLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

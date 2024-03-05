@@ -6,9 +6,9 @@ import { Spotlight } from "@/components/ui/Spotlight";
 
 const Hero = () => {
   return (
-    <div className="h-full w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <div className="h-screen w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Spotlight
-        className="-top-96 left-0 md:left-96 md:-top-20"
+        className="-top-40 left-0 md:left-96 md:-top-20"
         fill="white"
       />
       <div className="flex flex-col items-center">
@@ -18,9 +18,11 @@ const Hero = () => {
           </h1>
         </div>
         <div className="mt-10 flex flex-row gap-10">
-            <Button>
-              <Link href="/themes">Themes</Link>
-            </Button>
+            <Link href="/themes">
+              <Button>
+                Themes
+              </Button>
+            </Link>
             <Button>
               <Link href="/shop">Shop</Link>
             </Button>
