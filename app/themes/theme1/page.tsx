@@ -1,14 +1,23 @@
-
-import Hero from './components/Hero'
-import Contact from './components/Contact'
+"use client";
+import Hero from "./components/Hero";
+import Contact from "./components/Contact";
+import NavBar from "./components/NabBar";
+import { motion, useScroll } from "framer-motion";
 
 const Theme1 = () => {
-  return (
-    <div className=''>
-        <Hero />
-        <Contact />
-    </div>
-  )
-}
+  const { scrollYProgress } = useScroll();
 
-export default Theme1
+  return (
+    <div>
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
+      <NavBar />
+      <Hero />
+      <Contact />
+    </div>
+  );
+};
+
+export default Theme1;

@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  MapPinIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/solid";
+import { MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import React from "react";
 import ContactForm from "./ContactForm";
@@ -34,7 +31,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="grid 4xs:grid-cols-1 md:grid-cols-2 mx-auto rounded-lg w-[90%]">
+      <div className="grid gap-10 4xs:grid-cols-1 md:grid-cols-2 mx-auto rounded-lg w-[90%]">
         <div className="flex flex-col items-center">
           <ContactForm />
         </div>
