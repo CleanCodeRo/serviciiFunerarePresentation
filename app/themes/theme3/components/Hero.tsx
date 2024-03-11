@@ -2,6 +2,7 @@
 import useScreen from "@/hooks/useScreen";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   const isLargeScreen = useScreen();
@@ -36,7 +37,9 @@ const Hero = () => {
           </p>
           <div className="flex justify-center items-center 4xs:mt-4 md:mt-16">
             <Button className="mr-10">Suna-ne</Button>
-            <Button variant={"secondary"}>Contact</Button>
+            <Link href="/themes/theme3/contact">
+              <Button variant={"secondary"}>Contact</Button>
+            </Link>
           </div>
         </motion.div>
       </div>

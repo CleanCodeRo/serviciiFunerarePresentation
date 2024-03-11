@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import AnimatedCounter from "./AnimatedCounter";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Despre = () => {
   return (
@@ -113,9 +114,11 @@ const Despre = () => {
             </motion.div>
           </div>
           <div className="flex mt-10 justify-end items-end">
-            <Button className="bg-[#9c6b01] hover:bg-[#9c6b01]/75">
-              MAI MULTE
-            </Button>
+            <Link href="/themes/theme3/despre">
+              <Button className="bg-[#9c6b01] hover:bg-[#9c6b01]/75">
+                MAI MULTE
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

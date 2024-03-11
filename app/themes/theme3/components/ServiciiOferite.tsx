@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ServiciiOferite = () => {
   return (
-    <div className="flex items-center justify-center w-full h-[900px]">
+    <div className="flex items-center justify-center w-full">
       <div className=" mt-20 p-5 flex flex-col items-center 4xs:w-full lg:w-[60%] 4xs:h-full lg:h-[80%]">
         <div className="flex 4xs:flex-col lg:flex-row justify-evenly p-5">
           <div className="flex flex-col lg:w-[50%]">
@@ -23,9 +24,11 @@ const ServiciiOferite = () => {
             </p>
           </div>
           <div className="flex">
-            <Button className="bg-[#9c6b01] hover:bg-[#9c6b01]/75">
-              TOATE SERVICIILE
-            </Button>
+            <Link href="/themes/theme3/servicii">
+              <Button className="bg-[#9c6b01] hover:bg-[#9c6b01]/75">
+                TOATE SERVICIILE
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="grid 4xs:grid-cols-1 xl:grid-cols-3 lg:w-[98%]">

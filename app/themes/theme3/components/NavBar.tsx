@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
@@ -6,13 +6,16 @@ import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
-    { href: "#acasa", label: "ACASA" },
-    { href: "#despre", label: "DESPRE" },
-    { href: "#servicii", label: "SERVICII" },
-    { href: "#pachete", label: "PACHETE" },
-    { href: "#ajutor-inmormantare", label: "AJUTOR INMORMANTARE" },
-    { href: "#repatriere", label: "REPATRIERE" },
-    { href: "#contact", label: "CONTACT" },
+    { href: "/themes/theme3", label: "ACASA" },
+    { href: "/themes/theme3/despre", label: "DESPRE" },
+    { href: "/themes/theme3/servicii", label: "SERVICII" },
+    { href: "/themes/theme3/pachete", label: "PACHETE" },
+    {
+      href: "/themes/theme3/ajutor-inmormantare",
+      label: "AJUTOR INMORMANTARE",
+    },
+    { href: "/themes/theme3/repatriere", label: "REPATRIERE" },
+    { href: "/themes/theme3/contact", label: "CONTACT" },
   ];
 
   return (
