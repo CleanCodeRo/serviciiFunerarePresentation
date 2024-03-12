@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { Separator } from "@/components/ui/separator";
 
 const Pachete2 = () => {
   return (
@@ -50,16 +51,23 @@ const Pachete2 = () => {
             <p className="text-base py-1">
               Sicriu echipat complet(set deces,manere,crucifix)
             </p>
+            <Separator className="w-[90%] mx-auto" />{" "}
             <p className="text-base py-1">Cruce inscriptionata</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Transport – 2 servicii</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Manipulare decedat- 2 servicii</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">
               Igienizare, toaletare si cosmetica mortuara
             </p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">
               Imbalsamare si acte necesare D.S.P. Bucuresti
             </p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Casa Mortuara(48h)</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">
               Masina mortuara in ziua inmormantarii
             </p>
@@ -81,9 +89,13 @@ const Pachete2 = () => {
               795 LEI*
             </h2>
             <p className="text-base py-1">Sicriu complet echipat</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Transport – 1 serviciu</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Manipulare decedat</p>
+            <Separator className="w-[90%] mx-auto" />{" "}
             <p className="text-base py-1">Cruce inscriptionata</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">
               Masina mortuara in ziua inmormantarii
             </p>
@@ -105,12 +117,22 @@ const Pachete2 = () => {
               1078 LEI*
             </h2>
             <p className="text-base py-1">Sicriu complet echipat</p>
+            <Separator className="w-[90%] mx-auto" />
+
             <p className="text-base py-1">Transport – 1 serviciu</p>
+            <Separator className="w-[90%] mx-auto" />
+
             <p className="text-base py-1">Manipulare decedat</p>
+            <Separator className="w-[90%] mx-auto" />
+
             <p className="text-base py-1">Cruce inscriptionata</p>
+            <Separator className="w-[90%] mx-auto" />
+
             <p className="text-base py-1">
               Masina mortuara in ziua inmormantarii
             </p>
+            <Separator className="w-[90%] mx-auto" />
+
             <p className="text-base py-1">Casa Mortuara(48h)</p>
           </motion.div>
           <motion.div
@@ -133,16 +155,23 @@ const Pachete2 = () => {
               </h2>
             </div>
             <p className="text-base py-1">Sicriu Premium(complet echipat)</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Transport- 2 servicii</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Manipulare decedat – 2 servicii</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">
               Igienizare, toaletare si cosmetica mortuara
             </p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Cruce inscriptionata</p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">
               Imbalsamare si acte necesare D.S.P. Bucuresti
             </p>
+            <Separator className="w-[90%] mx-auto" />
             <p className="text-base py-1">Casa Mortuara</p>
+            <Separator className="w-[90%] mx-auto" />{" "}
             <p className="text-base py-1">
               Masina mortuara in ziua inmormantarii
             </p>
