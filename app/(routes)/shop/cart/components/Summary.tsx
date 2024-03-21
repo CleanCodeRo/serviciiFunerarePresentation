@@ -14,12 +14,12 @@ const Summary = () => {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (searchParams.get("success")) {
+    if (searchParams && searchParams.get("success")) {
       toast.success("Order placed successfully");
       removeAll();
     }
 
-    if (searchParams.get("canceled")) {
+    if (searchParams && searchParams.get("canceled")) {
       toast.error("Order canceled");
     }
   }, [searchParams, removeAll]);
