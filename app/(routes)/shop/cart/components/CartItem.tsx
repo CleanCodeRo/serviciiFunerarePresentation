@@ -16,7 +16,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
     const cart = useCart();
 
     const onRemove = () => {
-        cart.remove(data.id);
+        cart.remove(data.id, 'product');
     }
 
 
