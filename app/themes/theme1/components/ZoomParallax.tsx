@@ -22,7 +22,7 @@ const ZoomParallax = () => {
     offset: ["start start", "end end"],
   });
 
-  const scaleMobile = useTransform(scrollYProgress, [0, 1], [1, 2]);
+  const scaleMobile = useTransform(scrollYProgress, [0, 1], [1, 3]);
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
   const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
   const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
@@ -75,10 +75,38 @@ const ZoomParallax = () => {
           })}
         </div>
       ) : (
-        <div className={`top-0 sticky overflow-hidden h-56 flex items-center justify-center`}>
+        <div
+          className={`top-0 sticky overflow-hidden h-56 flex items-center justify-center`}
+        >
           <motion.div
             style={{ scale: scaleMobile }}
             className="flex w-[50%] h-[50%]"
+          >
+            <div className={styles.imageContainer}>
+              <Image
+                src={pictures[3].src}
+                objectFit="contain"
+                alt="image"
+                placeholder="blur"
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            style={{ scale: pictures[2].scale }}
+            className="flex w-[60%] h-[50%]"
+          >
+            <div className={styles.imageContainer}>
+              <Image
+                src={pictures[1].src}
+                objectFit="contain"
+                alt="image"
+                placeholder="blur"
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            style={{ scale: pictures[0].scale }}
+            className="flex w-[100%] h-[35%]"
           >
             <div className={styles.imageContainer}>
               <Image
