@@ -16,11 +16,11 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const selectedValue = searchParams.get(valueKey);
+  const selectedValue = searchParams?.get(valueKey);
 
   const onClick = (id: string) => {
     // this uses qs from query-string to parse the current query string
-    const currentQuery = qs.parse(searchParams.toString());
+    const currentQuery = qs.parse(searchParams ? searchParams.toString() : "");
 
     // this creates a new query object with the new value
     const query = {
