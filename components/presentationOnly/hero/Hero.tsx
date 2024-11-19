@@ -22,9 +22,6 @@ const Hero = () => {
           <Link href="/themes">
             <Button>Themes</Button>
           </Link>
-          <Button>
-            <Link href="/shop">Shop</Link>
-          </Button>
         </div>
       </div>
     </div>
